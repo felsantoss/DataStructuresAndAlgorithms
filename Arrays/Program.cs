@@ -1,5 +1,4 @@
 ﻿// Array com valores definidos
-
 string[] heroes = { "Spider Man", "Batman", "Iron Man" };
 
 for (int i = 0; i < heroes.Length; i++)
@@ -8,9 +7,8 @@ for (int i = 0; i < heroes.Length; i++)
 
 	Console.WriteLine($"{rank}. {heroes[i]}");
 }
-Console.Clear();
-// Array sem valor definido
 
+// Array sem valor definido
 string[] animes = new string[4];
 
 animes[0] = "Attack On Titan";
