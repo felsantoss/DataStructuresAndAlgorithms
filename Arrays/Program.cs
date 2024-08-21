@@ -1,6 +1,6 @@
-﻿// Uma matriz unidimensional é uma sequência de elementos semelhantes.
+﻿
 
-// Declarando e definindo valores do array.
+// Declare and set array element values.
 string[] heroes = { "Spider Man", "Batman", "Iron Man" };
 
 for (int i = 0; i < heroes.Length; i++)
@@ -10,7 +10,7 @@ for (int i = 0; i < heroes.Length; i++)
 	Console.WriteLine($"{rank}. {heroes[i]}");
 }
 
-// Declarando um array unidimensional de 4 strings.
+// Declare a single-dimensional arraay of 4 strings.
 string[] animes = new string[4];
 
 animes[0] = "Attack On Titan";
@@ -24,3 +24,11 @@ for (int i = 0; i < animes.Length; i++)
 
 	Console.WriteLine($"{rank}. {animes[i]}");
 }
+
+Console.Clear();
+
+long[] numbers = [ 0, 1, 2, 3, 4, 5 ];
+
+long lastNumber = numbers[numbers.Length - 1];
+
+Console.WriteLine(lastNumber);
