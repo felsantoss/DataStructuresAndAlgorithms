@@ -1,4 +1,4 @@
-﻿
+﻿// A single-dimensional array is a linear data structure  that store elements of the same data type in contigous memory alocation.
 
 // Declare and set array element values.
 string[] heroes = { "Spider Man", "Batman", "Iron Man" };
@@ -25,10 +25,14 @@ for (int i = 0; i < animes.Length; i++)
 	Console.WriteLine($"{rank}. {animes[i]}");
 }
 
-Console.Clear();
-
 long[] numbers = [ 0, 1, 2, 3, 4, 5 ];
 
+// Access the last index of array.
 long lastNumber = numbers[numbers.Length - 1];
 
-Console.WriteLine(lastNumber);
+// Access the element at index 2 in the array.
+long indexTwo = numbers[2];
+
+Console.WriteLine($"The index number two is {indexTwo}");
+
+// Inserting and deleting elements from array.

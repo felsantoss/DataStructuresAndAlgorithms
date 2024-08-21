@@ -15,11 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SingleDimensional", "Single
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Multidimensional", "Multidimensional", "{29B96BFA-FB72-43A5-80DA-709AE36D3A7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multidimensional", "Multidimensional\Multidimensional.csproj", "{AD5BC792-3D26-4EF9-9FE9-24C25E00EC5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multidimensional", "Multidimensional\Multidimensional.csproj", "{AD5BC792-3D26-4EF9-9FE9-24C25E00EC5E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jagged", "Jagged", "{5F6DB606-7FAB-4F1A-A3A2-837A34B76004}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jagged", "Jagged\Jagged.csproj", "{F59767F4-F306-4DC8-B7EB-CEF3D8F74712}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jagged", "Jagged\Jagged.csproj", "{F59767F4-F306-4DC8-B7EB-CEF3D8F74712}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
