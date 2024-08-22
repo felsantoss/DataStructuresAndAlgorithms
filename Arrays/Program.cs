@@ -34,5 +34,24 @@ long lastNumber = numbers[numbers.Length - 1];
 long indexTwo = numbers[2];
 
 Console.WriteLine($"The index number two is {indexTwo}");
+Console.Clear();
 
-// Inserting and deleting elements from array.
+// Inserting element at the end of an array
+int[] intArray = new int[6];
+int length = 0;
+
+for (int i = 0; i < 5; i++)
+{
+	intArray[length] = i; 
+	length++;
+}
+
+intArray[length] = 10;
+length++;
+
+//intArray[length] = 10;
+
+for (int i = 0; i < intArray.Length; i++)
+{
+	Console.WriteLine("Index " + i + " contains " + intArray[i]);
+}
