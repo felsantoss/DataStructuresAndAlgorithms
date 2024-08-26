@@ -34,12 +34,13 @@ long lastNumber = numbers[numbers.Length - 1];
 long indexTwo = numbers[2];
 
 Console.WriteLine($"The index number two is {indexTwo}");
+Console.Clear();
 
 // Inserting element at the end of an array
 int[] intArray = new int[6];
 int length = 0;
 
-for (int i = 0; i < 5; i++)
+for (int i = 0; i < 3; i++)
 {
 	intArray[length] = i; 
 	length++;
@@ -47,6 +48,15 @@ for (int i = 0; i < 5; i++)
 
 intArray[length] = 10;
 length++;
+
+// Inserting element at the start of an array
+
+for (int i = 3; i >= 0; i--)
+{
+	intArray[i + 1] = intArray[i];
+}
+
+intArray[0] = 20;
 
 for (int i = 0; i < intArray.Length; i++)
 {
