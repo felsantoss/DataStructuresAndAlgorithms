@@ -50,13 +50,24 @@ intArray[length] = 10;
 length++;
 
 // Inserting element at the start of an array
-
 for (int i = 3; i >= 0; i--)
 {
 	intArray[i + 1] = intArray[i];
 }
 
 intArray[0] = 20;
+
+// Inserting element anywhere in the array
+// Inserting element at the index 2
+
+// Create space for the new element
+for (int i = 4; i >= 2; i--)
+{
+	// Shift each element one position to the right
+	intArray[i + 1] = intArray[i];
+}
+
+intArray[2] = 30;
 
 for (int i = 0; i < intArray.Length; i++)
 {
