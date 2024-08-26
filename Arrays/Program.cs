@@ -69,7 +69,32 @@ for (int i = 4; i >= 2; i--)
 
 intArray[2] = 30;
 
-for (int i = 0; i < intArray.Length; i++)
+Console.Clear();
+
+int[] numbersArray = new int[16];
+
+for (int index = 0; index <= numbersArray.Length - 2; index++)
 {
-	Console.WriteLine("Index " + i + " contains " + intArray[i]);
+	numbersArray[index] = index;
+}
+
+numbersArray[numbersArray.Length - 1] = 66;
+
+for (int i = 0; i < numbersArray.Length; i++)
+{
+	Console.WriteLine("Index " + i + " contains " + numbersArray[i]);
+}
+
+int[] arrayOne = { 0, 1, 2, 3, 4 };
+
+int[] arrayOneCopy = new int[arrayOne.Length];
+
+for (int i = 0; i < arrayOneCopy.Length; i++)
+{
+	arrayOneCopy[i] = arrayOne[i];
+}
+
+foreach (var index in arrayOneCopy)
+{
+	Console.WriteLine($"{index}");
 }
