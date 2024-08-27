@@ -69,8 +69,6 @@ for (int i = 4; i >= 2; i--)
 
 intArray[2] = 30;
 
-Console.Clear();
-
 int[] numbersArray = new int[16];
 
 for (int index = 0; index <= numbersArray.Length - 2; index++)
@@ -85,6 +83,7 @@ for (int i = 0; i < numbersArray.Length; i++)
 	Console.WriteLine("Index " + i + " contains " + numbersArray[i]);
 }
 
+// Copy elements into another array
 int[] arrayOne = { 0, 1, 2, 3, 4 };
 
 int[] arrayOneCopy = new int[arrayOne.Length];
@@ -94,7 +93,47 @@ for (int i = 0; i < arrayOneCopy.Length; i++)
 	arrayOneCopy[i] = arrayOne[i];
 }
 
-foreach (var index in arrayOneCopy)
+Console.Clear();
+
+int n = 10;
+int[] oldArray = new int[n];
+int idx;
+
+// Initial array of size 10
+for (idx = 0; idx < n; idx++)
 {
-	Console.WriteLine($"{index}");
+	oldArray[idx] = idx + 1;
+}
+
+// Print original array
+for (idx = 0; idx < n; idx++)
+{
+	Console.Write(oldArray[idx] + " ");
+}
+Console.WriteLine();
+// element to be inserted
+int x = 50;
+
+// position at witch element is to be inserted
+int pos = 5;
+
+// create new array with size + 1
+int[] newArray = new int[n + 1];
+
+// insert the elements from the old array int the new array, insert all elements till pos, then insert x at pos, then insert rest of elements
+for (idx = 0; idx < n + 1; idx++)
+{
+	if (idx < pos - 1)
+		newArray[idx] = oldArray[idx];
+
+	else if (idx == pos - 1)
+		newArray[idx] = x;
+
+	else
+		newArray[idx] = oldArray[idx - 1];
+}
+
+for (idx = 0; idx < n + 1; idx++)
+{
+	Console.Write(newArray[idx] + " ");
 }
