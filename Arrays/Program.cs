@@ -137,3 +137,24 @@ for (idx = 0; idx < n + 1; idx++)
 {
 	Console.Write(newArray[idx] + " ");
 }
+
+Console.Clear();
+
+// Deleting From The End of an Array
+
+int[] deletingLastItem = new int[10];
+
+int item = 0;
+
+for (int i = 0; i < 6; i++)
+{
+	deletingLastItem[item] = i;
+	item++;
+}
+
+item--;
+
+for (int i = 0; i < item; i++)
+{
+	Console.WriteLine($"Index {i} contains {deletingLastItem[i]}");
+}
