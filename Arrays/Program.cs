@@ -142,13 +142,13 @@ Console.Clear();
 
 // Deleting From The End of an Array
 
-int[] deletingLastItem = new int[10];
+int[] arrayDeleting = new int[10];
 
 int item = 0;
 
-for (int i = 0; i < 6; i++)
+for (int i = 0; i < 7; i++)
 {
-	deletingLastItem[item] = i;
+	arrayDeleting[item] = i;
 	item++;
 }
 
@@ -156,5 +156,36 @@ item--;
 
 for (int i = 0; i < item; i++)
 {
-	Console.WriteLine($"Index {i} contains {deletingLastItem[i]}");
+	Console.WriteLine($"Index {i} contains {arrayDeleting[i]}");
+}
+
+// Deleting From The Start of an Array
+
+for (int i = 1; i < item; i++)
+{
+	// Shift each element one position to the left
+	arrayDeleting[i - 1] = arrayDeleting[i];
+}
+
+item--;
+
+for (int i = 0; i < item; i++)
+{
+	Console.WriteLine($"Index {i} contains {arrayDeleting[i]}");
+}
+Console.Clear();
+// Deleting From Anywhere in the Array
+
+// Delete the element at index 1
+
+for (int i = 2; i < item; i++)
+{
+	arrayDeleting[i - 1] = arrayDeleting[i];
+}
+
+item--;
+
+for (int i = 0; i < item; i++)
+{
+	Console.WriteLine($"Index {i} contains {arrayDeleting[i]}");
 }
