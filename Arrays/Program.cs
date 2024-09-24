@@ -189,3 +189,23 @@ for (int i = 0; i < item; i++)
 {
 	Console.WriteLine($"Index {i} contains {arrayDeleting[i]}");
 }
+
+// In-place operations, in-place operation we modify an array, without creating a new Array
+
+
+// Exemple: Given an Array of integers, return an Array where every element at an even-indexed position is squared.
+
+static int[] SquareEven(int[] array, int length)
+{
+	if (array == null)
+		return array;
+
+	// Iterate through even elements of the original array.
+	// Notice how don`t need to do *anything* to the odd indexes
+	for (int i = 0; i < length; i+= 2)
+	{
+		array[i] *= array[i];
+	}
+
+	return array;
+}
