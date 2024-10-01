@@ -37,3 +37,24 @@ bool ValidMountainArray(int[] arr)
 
 	return true;	
 }
+
+// 1299 - Replace Elements with Greatest Element on Right Side
+
+int[] ReplaceElements(int[] arr)
+{
+	// Start from the end of the array
+
+	int maxValue = -1;
+
+	for (var i = arr.Length - 1; i >= 0; i--)
+	{
+		int currentValue = arr[i]; // Store the current value
+
+		arr[i] = maxValue; // Replace the current element with the max of elements to its right
+
+		maxValue = Math.Max(maxValue, currentValue); // Update the maxValue with the maximum between maxValue and currentValue
+	}
+
+	return arr;
+
+}
