@@ -38,12 +38,15 @@ bool ValidMountainArray(int[] arr)
 	return true;	
 }
 
+int[] testeArray = { 17, 18, 5, 4, 6, 1 };
+
+Console.WriteLine(String.Join(", ", ReplaceElements(testeArray)));
+
 // 1299 - Replace Elements with Greatest Element on Right Side
 
 int[] ReplaceElements(int[] arr)
 {
 	// Start from the end of the array
-
 	int maxValue = -1;
 
 	for (var i = arr.Length - 1; i >= 0; i--)
@@ -56,5 +59,21 @@ int[] ReplaceElements(int[] arr)
 	}
 
 	return arr;
+}
 
+// 26 - Remove Duplicates from Sorted Array
+
+int RemoveDuplicate(int[] nums)
+{
+	int index = 1;
+
+	for (int i = 0; i < nums.Length - 1; i++)
+	{
+		if (nums[i] != nums[i + 1])
+		{
+			nums[index++] = nums[i + 1];
+		}
+	}
+
+	return index;
 }
