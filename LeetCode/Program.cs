@@ -78,10 +78,6 @@ int RemoveDuplicate(int[] nums)
 	return index;
 }
 
-int[] num = { 0, 1, 0, 3, 12 };
-
-MoveZeroes(num);
-
 // 283 - Move Zeroes
 void MoveZeroes(int[] nums)
 {
