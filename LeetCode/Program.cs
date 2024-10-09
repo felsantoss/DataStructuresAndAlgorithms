@@ -38,10 +38,6 @@ bool ValidMountainArray(int[] arr)
 	return true;	
 }
 
-int[] testeArray = { 17, 18, 5, 4, 6, 1 };
-
-Console.WriteLine(String.Join(", ", ReplaceElements(testeArray)));
-
 // 1299 - Replace Elements with Greatest Element on Right Side
 
 int[] ReplaceElements(int[] arr)
@@ -81,19 +77,42 @@ int RemoveDuplicate(int[] nums)
 // 283 - Move Zeroes
 void MoveZeroes(int[] nums)
 {
-	int count = 0;
+	int lastZero = 0;
 
 	for (int i = 0; i < nums.Length; i++)
 	{
 		if (nums[i] != 0)
 		{
-			int temp = nums[i];
+			int temp = nums[lastZero];
 
-			nums[i] = nums[count];
+			nums[lastZero] = nums[i];
 
-			nums[count] = temp;
+			nums[i] = temp;
+
+			lastZero++;
+		}
+	}
+}
+
+// 905 - Sort Array By Parity
+
+int[] SortArrayByParity(int[] nums)
+{
+	int count = 0;
+
+	for (int i = 0; i < nums.Length; i++)
+	{
+		if (nums[i] % 2 == 0)
+		{
+			int temp = nums[count];
+
+			nums[count] = nums[i];
+
+			nums[i] = temp;
 
 			count++;
 		}
 	}
+
+	return nums;
 }
