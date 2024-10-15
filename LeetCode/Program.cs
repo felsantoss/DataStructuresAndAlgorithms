@@ -99,7 +99,7 @@ void MoveZeroes(int[] nums)
 int[] SortArrayByParity(int[] nums)
 {
 	int count = 0;
-
+	
 	for (int i = 0; i < nums.Length; i++)
 	{
 		if (nums[i] % 2 == 0)
@@ -115,4 +115,22 @@ int[] SortArrayByParity(int[] nums)
 	}
 
 	return nums;
+}
+
+// 27 - Remove Elements
+
+int RemoveElements(int[] nums, int val)
+{
+	int k = 0;
+
+	for (int i = 0; i < nums.Length; i++)
+	{
+		if (nums[i] != val)
+		{
+			nums[k] = nums[i];
+			k++;
+		}
+	}
+
+	return k;
 }
