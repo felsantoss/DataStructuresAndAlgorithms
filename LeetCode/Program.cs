@@ -156,3 +156,35 @@ int HeightChecker(int[] heights)
 
 	return count;
 }
+
+// 414 - Third Maximum Number
+int ThirdMax(int[] nums)
+{
+	long firstMax = long.MinValue;
+	long secondMax = long.MinValue;
+	long thirdMax = long.MinValue;
+
+	foreach (var num in nums)
+	{
+		if (num == firstMax || num == secondMax || num == thirdMax)
+			continue;
+
+		if (num > firstMax)
+		{
+			thirdMax = secondMax;
+			secondMax = firstMax;
+			firstMax = num;
+		}
+		else if (num > secondMax)
+		{
+			thirdMax = secondMax;
+			secondMax = num;
+		}
+		else if (num > thirdMax)
+		{
+			thirdMax = num;
+		}
+	}
+
+	return (int) (thirdMax != long.MinValue ? thirdMax : firstMax);
+}
