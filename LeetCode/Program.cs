@@ -188,3 +188,34 @@ int ThirdMax(int[] nums)
 
 	return (int) (thirdMax != long.MinValue ? thirdMax : firstMax);
 }
+
+int[] tes = { 1, 3 };
+
+FindDisappearedNumbers(tes);
+
+foreach(var t in tes)
+{
+	Console.WriteLine(t);
+}
+
+// 448. Find All Numbers Disappeared in an Array
+IList<int> FindDisappearedNumbers(int[] nums)
+{
+	List<int> result = [];
+
+	for (int i = 0; i < nums.Length; i++)
+	{
+		int index = Math.Abs(nums[i]) - 1;
+
+		if (nums[index] > 0)
+			nums[index] = -nums[index];
+	}
+
+	for (int i = 0; i < nums.Length; i++)
+	{
+		if (nums[i] > 0)
+			result.Add(i + 1);
+	}
+
+	return result;
+}
